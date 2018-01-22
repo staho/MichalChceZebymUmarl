@@ -12,7 +12,6 @@
 
     return {
         getName: () => {return name},
-        setName: (sth) => {this.name = sth}
     }
 }
     
