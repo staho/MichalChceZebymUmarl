@@ -7,14 +7,15 @@
 //     }
 //   }
 
- Test = (() => {
+ let Test = () => {
     let name = "Something"
 
     return {
-        getName: () => {return name}
+        getName: () => {return name},
+        setName: (sth) => {this.name = sth}
     }
-})
+}
     
 
-x = Test()
+let x = Test()
 console.log(x.getName())
