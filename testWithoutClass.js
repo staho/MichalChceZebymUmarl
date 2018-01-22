@@ -7,14 +7,12 @@
 //     }
 //   }
 
- let Test = () => {
+ let Test = (() => {
     let name = "Something"
 
     return {
         getName: () => {return name},
     }
-}
+})()
     
-
-let x = Test()
-console.log(x.getName())
+console.log(Test.getName())
