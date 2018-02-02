@@ -11,5 +11,8 @@ function test() {
 }
   
 let obj = {
-    name: 'Something'
+    name: 'Something',
+    test: test
 }
+
+obj.test()
