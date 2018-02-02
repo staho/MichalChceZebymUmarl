@@ -13,10 +13,11 @@ function printAsync(str) {
   	setTimeout(() => resolve(str), Math.random() * 1000)
   })
 }
+//mój kot 🐱
 
-// to zmien na swoj kod
-printAsync(1).then(console.log)
-printAsync(2).then(console.log)
-printAsync(3).then(console.log)
+let x = printAsync(1)
+let x1 = printAsync(2)
+let x2 = printAsync(3)
 
-
+Promise.all([x, x1, x2])
+            .then(x => x.forEach(el => console.log(el)))
