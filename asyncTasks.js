@@ -15,9 +15,10 @@ function printAsync(str) {
 }
 //mój kot 🐱
 
-let x = printAsync(1)
-let x1 = printAsync(2)
-let x2 = printAsync(3)
+let promise1 = printAsync(1)
+let promise2 = printAsync(2)
+let promise3 = printAsync(3)
 
-Promise.all([x, x1, x2])
-            .then(x => x.forEach(el => console.log(el)))
+promise1.then(console.log)
+        .then(() => promise2.then(console.log))
+        .then(() => promise3.then(console.log))
